@@ -1,4 +1,4 @@
-use crate::utils::fibonocci::FibonacciSequence;
+use crate::utils::fibonacci::FibonacciSequence;
 
 #[test]
 fn problem_002() {

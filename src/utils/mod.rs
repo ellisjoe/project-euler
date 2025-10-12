@@ -1,2 +1,3 @@
-pub mod fibonocci;
+pub mod fibonacci;
 pub mod primes;
+pub mod numbers;
