@@ -3,3 +3,4 @@ mod problem_002;
 mod problem_003;
 mod problem_004;
 mod problem_005;
+mod problem_006;
