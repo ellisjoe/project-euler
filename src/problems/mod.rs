@@ -9,3 +9,4 @@ mod problem_008;
 mod problem_009;
 mod problem_010;
 mod problem_011;
+mod problem_012;

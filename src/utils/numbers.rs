@@ -14,3 +14,16 @@ fn gcd_internal(a: i64, b: i64) -> i64 {
     }
     gcd_internal(b, a % b)
 }
+
+pub fn num_divisors(n: i64) -> i64 {
+    let mut total = 0;
+    for i in (1..=n).take_while(|&i| i * i <= n) {
+        if (n % i) == 0 {
+            total += 2;
+        }
+        if i * i == n {
+            total -= 1;
+        }
+    }
+    total
+}
