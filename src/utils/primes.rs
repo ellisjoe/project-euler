@@ -24,10 +24,16 @@ pub fn largest_prime_factor(number: u64) -> u64 {
 }
 
 pub fn is_prime(number: u64) -> bool {
-    if number % 2 == 0 {
+    if number == 2 {
+        return true;
+    }
+
+    // Too small or even
+    if number < 2 || number % 2 == 0 {
         return false;
     }
 
+    // Divisible by any odd number less than its sqrt
     for i in (3..).step_by(2).take_while(move |&i| i * i <= number.clone()) {
         if number % i == 0 {
             return false;
