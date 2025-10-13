@@ -22,3 +22,4 @@ mod problem_021;
 mod problem_022;
 mod problem_023;
 mod problem_024;
+mod problem_025;

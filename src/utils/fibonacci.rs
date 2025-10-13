@@ -1,6 +1,8 @@
+use num_bigint::BigInt;
+
 #[derive(Clone)]
 pub struct FibonacciSequence {
-    values: Vec<u64>,
+    values: Vec<BigInt>,
 }
 
 impl FibonacciSequence {
@@ -12,17 +14,16 @@ impl FibonacciSequence {
 }
 
 impl Iterator for FibonacciSequence {
-    type Item = u64;
+    type Item = BigInt;
 
     fn next(&mut self) -> Option<Self::Item> {
         let next_value = match self.values.as_slice() {
-            [] => 1,
-            [1] => 2,
+            [] | [_] => BigInt::from(1),
             [left, right] => left + right,
             _ => panic!(),
         };
 
-        self.values.push(next_value);
+        self.values.push(next_value.clone());
 
         if self.values.len() > 2 {
             self.values.remove(0);
