@@ -27,3 +27,8 @@ pub fn num_divisors(n: i64) -> i64 {
     }
     total
 }
+
+pub fn sum_divisors(n: i64) -> i64 {
+    let max = n / 2;
+    (1..=max).filter(|&i| n % i == 0).sum()
+}
