@@ -30,3 +30,4 @@ mod problem_029;
 mod problem_030;
 mod problem_031;
 mod problem_032;
+mod problem_033;

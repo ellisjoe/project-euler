@@ -32,3 +32,13 @@ pub fn sum_divisors(n: i64) -> i64 {
     let max = n / 2;
     (1..=max).filter(|&i| n % i == 0).sum()
 }
+
+pub trait Digits {
+    fn digits(&self) -> Vec<i64>;
+}
+
+impl Digits for i64 {
+    fn digits(&self) -> Vec<i64> {
+        self.to_string().chars().map(|c| c.to_digit(10).unwrap() as i64).collect()
+    }
+}
