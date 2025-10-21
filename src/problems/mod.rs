@@ -33,3 +33,4 @@ mod problem_032;
 mod problem_033;
 mod problem_034;
 mod problem_035;
+mod problem_036;

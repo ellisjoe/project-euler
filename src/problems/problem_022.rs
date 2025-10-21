@@ -1,6 +1,5 @@
 use std::error::Error;
-use std::fs::{read_to_string, File};
-use std::io::{BufRead, BufReader};
+use std::fs::read_to_string;
 
 #[test]
 fn problem_022() -> Result<(), Box<dyn Error>> {

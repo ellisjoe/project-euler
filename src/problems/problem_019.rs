@@ -12,12 +12,6 @@ struct DateIterator {
     date: Date,
 }
 
-impl DateIterator {
-    fn new(date: Date) -> Self {
-        Self { date }
-    }
-}
-
 impl Iterator for DateIterator {
     type Item = Date;
 

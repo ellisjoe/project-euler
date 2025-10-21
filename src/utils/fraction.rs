@@ -29,10 +29,6 @@ impl Fraction {
         Self { num, den }
     }
 
-    pub fn numerator(&self) -> i64 {
-        self.num
-    }
-
     pub fn denominator(&self) -> i64 {
         self.den
     }
