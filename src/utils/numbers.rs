@@ -42,3 +42,12 @@ impl Digits for i64 {
         self.to_string().chars().map(|c| c.to_digit(10).unwrap() as i64).collect()
     }
 }
+
+pub fn number(digits: &[i64]) -> i64 {
+    let mut result = 0;
+    for d in digits {
+        result *= 10;
+        result += *d;
+    }
+    result
+}
