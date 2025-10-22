@@ -14,7 +14,7 @@ fn problem_040() {
 }
 
 // Begin vec with 0 so we can get digit 1 using index 1
-fn all_digits() -> Vec<i64> {
+fn all_digits() -> Vec<i8> {
     let mut digits = vec![0];
     let mut current = 1;
     while digits.len() < 1_000_001 {

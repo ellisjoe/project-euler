@@ -23,7 +23,7 @@ fn problem_033() {
                 let new_den = **den_diff.first().unwrap();
 
                 let init = Fraction::new(num, den);
-                let new = Fraction::new(new_num, new_den);
+                let new = Fraction::new(new_num as i64, new_den as i64);
                 if init.simplify() == new.simplify() {
                     fractions.push(new);
                 }

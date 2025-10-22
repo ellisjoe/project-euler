@@ -34,20 +34,20 @@ pub fn sum_divisors(n: i64) -> i64 {
 }
 
 pub trait Digits {
-    fn digits(&self) -> Vec<i64>;
+    fn digits(&self) -> Vec<i8>;
 }
 
 impl Digits for i64 {
-    fn digits(&self) -> Vec<i64> {
-        self.to_string().chars().map(|c| c.to_digit(10).unwrap() as i64).collect()
+    fn digits(&self) -> Vec<i8> {
+        self.to_string().chars().map(|c| c.to_digit(10).unwrap() as i8).collect()
     }
 }
 
-pub fn number(digits: &[i64]) -> i64 {
-    let mut result = 0;
+pub fn number(digits: &[i8]) -> i64 {
+    let mut result: i64 = 0;
     for d in digits {
         result *= 10;
-        result += *d;
+        result += *d as i64;
     }
     result
 }

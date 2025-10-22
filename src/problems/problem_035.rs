@@ -1,4 +1,4 @@
-use crate::utils::numbers::Digits;
+use crate::utils::numbers::{number, Digits};
 use crate::utils::primes::is_prime;
 
 #[test]
@@ -17,13 +17,4 @@ fn all_rotations(num: i64) -> Vec<i64> {
         current.rotate_left(1);
     }
     rotations
-}
-
-fn number(digits: &[i64]) -> i64 {
-    let mut result = 0;
-    for d in digits {
-        result *= 10;
-        result += *d;
-    }
-    result
 }

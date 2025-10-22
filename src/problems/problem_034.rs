@@ -12,6 +12,6 @@ fn digit_factorial_sum(num: i64) -> i64 {
     num.digits().into_iter().map(factorial).sum()
 }
 
-fn factorial(num: i64) -> i64 {
-    (1..=num).product()
+fn factorial(num: i8) -> i64 {
+    (1..=num).map(i64::from).product()
 }
