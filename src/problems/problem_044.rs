@@ -1,5 +1,4 @@
 use std::collections::HashSet;
-use std::time::Instant;
 
 #[test]
 fn problem_044() {
