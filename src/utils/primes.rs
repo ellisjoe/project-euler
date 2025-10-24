@@ -1,3 +1,30 @@
+pub struct Primes {
+    primes: Vec<u64>,
+}
+
+impl Primes {
+    pub fn new(max_prime: u64) -> Self {
+        Primes {
+            primes: (1..max_prime).filter(|&x| is_prime(x)).collect(),
+        }
+    }
+
+    pub fn factors(&self, n: u64) -> Vec<u64> {
+        let mut current = n;
+        let mut factors = Vec::new();
+        for prime in &self.primes {
+            while current % prime == 0 {
+                current /= prime;
+                factors.push(*prime);
+            }
+            if current == 1 {
+                return factors;
+            }
+        }
+        panic!("Primes not initialized with a high enough max_prime value");
+    }
+}
+
 // Inspiration from: https://www.geeksforgeeks.org/dsa/find-largest-prime-factor-number/
 pub fn largest_prime_factor(number: u64) -> u64 {
     let mut number = number;
@@ -9,7 +36,10 @@ pub fn largest_prime_factor(number: u64) -> u64 {
     }
 
     // Remove odd factors up to the sqrt of the given number
-    for i in (3..).step_by(2).take_while(move |&i| i * i <= number.clone()) {
+    for i in (3..)
+        .step_by(2)
+        .take_while(move |&i| i * i <= number.clone())
+    {
         while number % i == 0 {
             largest_factor = i;
             number /= i;
@@ -34,7 +64,10 @@ pub fn is_prime(number: u64) -> bool {
     }
 
     // Divisible by any odd number less than its sqrt
-    for i in (3..).step_by(2).take_while(move |&i| i * i <= number.clone()) {
+    for i in (3..)
+        .step_by(2)
+        .take_while(move |&i| i * i <= number.clone())
+    {
         if number % i == 0 {
             return false;
         }
