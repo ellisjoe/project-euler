@@ -25,6 +25,15 @@ impl Primes {
     }
 }
 
+impl IntoIterator for Primes {
+    type Item = u64;
+    type IntoIter = std::vec::IntoIter<Self::Item>;
+
+    fn into_iter(self) -> Self::IntoIter {
+        self.primes.into_iter()
+    }
+}
+
 // Inspiration from: https://www.geeksforgeeks.org/dsa/find-largest-prime-factor-number/
 pub fn largest_prime_factor(number: u64) -> u64 {
     let mut number = number;
