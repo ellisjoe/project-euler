@@ -47,3 +47,4 @@ mod problem_046;
 mod problem_047;
 mod problem_048;
 mod problem_049;
+mod problem_050;

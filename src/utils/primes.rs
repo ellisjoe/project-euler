@@ -9,6 +9,10 @@ impl Primes {
         }
     }
 
+    pub fn as_slice(&self) -> &[u64] {
+        self.primes.as_slice()
+    }
+
     pub fn factors(&self, n: u64) -> Vec<u64> {
         let mut current = n;
         let mut factors = Vec::new();
