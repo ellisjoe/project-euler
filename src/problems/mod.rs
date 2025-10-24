@@ -45,3 +45,4 @@ mod problem_044;
 mod problem_045;
 mod problem_046;
 mod problem_047;
+mod problem_048;
