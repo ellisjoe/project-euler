@@ -49,3 +49,4 @@ mod problem_048;
 mod problem_049;
 mod problem_050;
 mod problem_051;
+mod problem_052;
