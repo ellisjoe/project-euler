@@ -5,3 +5,4 @@ pub mod collatz;
 pub mod fraction;
 pub mod pandigital;
 pub mod permutations;
+pub mod big_int;

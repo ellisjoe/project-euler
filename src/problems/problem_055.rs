@@ -1,4 +1,5 @@
 use num_bigint::BigInt;
+use crate::utils::big_int::BigIntDigits;
 
 #[test]
 fn problem_055() {
@@ -24,7 +25,7 @@ fn iterate(num: &BigInt) -> BigInt {
 }
 
 fn reverse(num: &BigInt) -> BigInt {
-    let mut digits = digits(num);
+    let mut digits = num.digits();
     digits.reverse();
     big_int(digits.as_slice())
 }
@@ -40,8 +41,4 @@ fn big_int(digits: &[i8]) -> BigInt {
         num = num + digit;
     }
     num
-}
-
-fn digits(num: &BigInt) -> Vec<i8> {
-    num.to_string().chars().map(|c| c.to_digit(10).unwrap() as i8).collect()
 }
