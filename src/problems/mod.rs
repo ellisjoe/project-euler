@@ -51,3 +51,4 @@ mod problem_050;
 mod problem_051;
 mod problem_052;
 mod problem_053;
+mod problem_054;
