@@ -44,10 +44,5 @@ impl Digits for i64 {
 }
 
 pub fn number(digits: &[i8]) -> i64 {
-    let mut result: i64 = 0;
-    for d in digits {
-        result *= 10;
-        result += *d as i64;
-    }
-    result
+    digits.into_iter().fold(0, |acc, digit| acc * 10 + (*digit as i64))
 }
