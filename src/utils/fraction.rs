@@ -33,6 +33,10 @@ impl Fraction {
         self.den
     }
 
+    pub fn numerator(&self) -> i64 {
+        self.num
+    }
+
     pub fn simplify(&self) -> Fraction {
         let divisor = gcd(self.num, self.den);
         Self {
